@@ -1,0 +1,14 @@
+.results-block__value-wall {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  word-break: break-all;
+}
+
+.results-block__item {
+  margin-bottom: 10px;
+}

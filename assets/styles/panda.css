@@ -1,0 +1,14 @@
+@import "./template/form.css";
+@import "./template/button.css";
+@import "./template/results.css";
+
+/* GLOBAL VARIABLES */
+body {
+  background: #ffdfd3;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+}
