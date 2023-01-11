@@ -37,8 +37,6 @@ class PandaScript {
       });
       const data = await response.json();
 
-      console.log(data);
-
       this.#drawresultWall(data);
     } catch (error) {
       console.log("Error : ", error);
