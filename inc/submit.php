@@ -46,6 +46,11 @@ class Submit {
 			} else {
 				$this->c_field_value = filter_input(INPUT_POST, 'c_field_value', FILTER_SANITIZE_STRING);
 			}
+		}
+	}
+
+	public function insertData() {
+		if (isset($_POST['submit'])) {
 			if (empty($this->a_field_Err) && empty($this->b_field_Err) && empty($this->c_field_Err)) {
 				if ($this->database->insert($this->table_a, ['a_table_value' => $this->a_field_value]) && $this->database->insert($this->table_b, ['b_table_value' => $this->b_field_value]) && $this->database->insert($this->table_c, ['c_table_value' => $this->c_field_value])) {
 					Message::showSuccessMessage();
@@ -60,3 +65,4 @@ class Submit {
 
 $form = new Submit();
 $form->validateForm();
+$form->insertData();
